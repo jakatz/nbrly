@@ -1,4 +1,4 @@
-if(Requests.find().count() === 0) {
+if (Requests.find().count() === 0) {
   Requests.insert({
     title: "Steve",
     distance: "5 miles"
