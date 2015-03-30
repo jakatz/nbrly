@@ -1,0 +1,12 @@
+<template name="layout">
+  <div class="container">
+    <header class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a href="{{pathFor "requestsList"}}" class="navbar-brand">Neighborly</a>
+      </div>
+    </header>
+  </div>
+  <div id="main">
+    {{> yield}}
+  </div>
+</template>
