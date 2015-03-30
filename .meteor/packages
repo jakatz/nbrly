@@ -1,2 +1,6 @@
 standard-app-packages
 iron:router
+twbs:bootstrap
+underscore
+dburles:google-maps
+meteorhacks:kadira
