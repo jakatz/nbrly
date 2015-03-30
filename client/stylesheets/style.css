@@ -1,4 +1,4 @@
-.grid-block, .main, .post, .comments li, .comment-form {
+.grid-block, .main, .request, .comments li, .comment-form {
   background: #fff;
   border-radius: 3px;
   padding: 10px;
@@ -29,50 +29,50 @@ body {
 #spinner {
   height: 300px; }
 
-.post {
+.request {
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
   opacity: 1; }
-  .post:before, .post:after {
+  .request:before, .request:after {
     content: "";
     display: table; }
-  .post:after {
+  .request:after {
     clear: both; }
-  .post.invisible {
+  .request.invisible {
     opacity: 0; }
-  .post.instant {
+  .request.instant {
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     transition: none; }
-  .post.animate{
+  .request.animate{
     -webkit-transition: all 300ms 0ms;
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in; }
-  .post .upvote {
+  .request .upvote {
     display: block;
     margin: 7px 12px 0 0;
     float: left; }
-  .post .post-content {
+  .request .request-content {
     float: left; }
-    .post .post-content h3 {
+    .request .request-content h3 {
       margin: 0;
       line-height: 1.4;
       font-size: 18px; }
-      .post .post-content h3 a {
+      .request .request-content h3 a {
         display: inline-block;
         margin-right: 5px; }
-      .post .post-content h3 span {
+      .request .request-content h3 span {
         font-weight: normal;
         font-size: 14px;
         display: inline-block;
         color: #aaaaaa; }
-    .post .post-content p {
+    .request .request-content p {
       margin: 0; }
-  .post .discuss {
+  .request .discuss {
     display: block;
     float: right;
     margin-top: 7px; }
@@ -111,7 +111,7 @@ body {
     text-decoration: none;
     background: rgba(0, 0, 0, 0.1); }
 
-.posts .spinner-container{
+.requests .spinner-container{
   position: relative;
   height: 100px;
 }
