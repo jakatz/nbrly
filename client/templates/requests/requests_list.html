@@ -1,4 +1,7 @@
 <template name="requestsList">
+  <div class="map-container">
+   {{> googleMap name="mapBanner" options=mapOptions}}
+  </div>
   <div class="requests">
     {{#each requests}}
       {{> requestItem}}
