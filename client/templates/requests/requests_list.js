@@ -1,5 +1,5 @@
 Template.requestsList.helpers({
   requests: function() {
-    return Requests.find();
+    return Requests.find({}, {sort: {submitted: -1}});
   }
 });
