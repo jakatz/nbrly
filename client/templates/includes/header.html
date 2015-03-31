@@ -11,6 +11,9 @@
         <a href="{{pathFor "requestsList"}}" class="navbar-brand">Neighborly</a>
       </div>
       <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="{{pathFor 'requestSubmit'}}">Submit Request</a></li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}
         </ul>
