@@ -14,6 +14,7 @@ body {
 #main {
   position: relative;
 }
+
 .page {
   position: absolute;
   top: 0px;
@@ -21,10 +22,9 @@ body {
 }
 
 .map-container {
-
   width: 100%;
   height: 150px;
-  margin:10px 0;
+  margin: 10px 0px;
 }
 
 .navbar {
