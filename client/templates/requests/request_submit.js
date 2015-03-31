@@ -12,7 +12,13 @@ Template.requestSubmit.events({
 			dueDate: $(e.target).find('[name=due-date]').val()
 		};
 
-		request._id = Requests.insert(request);
-		Router.go('requestPage', request);
+		Meteor.call('requestInsert', request, function(error, result) {
+			// display the error to the user and abort
+			if (error) {
+				return alert(error.reason);
+			}
+
+			Router.go('requestPage', {_id: result._id});
+		});		
 	}
 });
