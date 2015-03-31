@@ -1,3 +1,7 @@
+Template.requestEdit.rendered = function() {
+	$('#date-picker').datepicker();
+}
+
 Template.requestEdit.events({
 	'submit form': function(e) {
 		e.preventDefault();
@@ -7,7 +11,7 @@ Template.requestEdit.events({
 		var requestProperties = {
 			title: $(e.target).find('[name=title]').val(),
 			description: $(e.target).find('[name=description]').val(),
-			dueDate: $(e.target).find('[name=dueDate]').val()
+			dueDate: $(e.target).find('[name=due-date]').val()
 		}
 
 		Requests.update(currentRequestId, {$set: requestProperties}, function(error) {
