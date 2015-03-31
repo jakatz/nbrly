@@ -1,0 +1,25 @@
+<template name="requestEdit">
+  <form class="main form page">
+    <div class="form-group">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="{{title}}" placeholder="Give your request a title." class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="description">Description</label>
+      <div class="controls">
+          <input name="description" id="description" type="text" value="{{description}}" placeholder="Please describe your request" class="form-control"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="due-date" class="control-label">Due Date</label>
+      <div class="controls">
+        <input type="text" class="form-control" id="date-picker" name="due-date" value="{{dueDate}}" placeholder="Click here to enter a due date" />
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete post</a>
+  </form>
+</template>

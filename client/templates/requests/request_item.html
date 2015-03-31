@@ -2,7 +2,14 @@
   <div class="request">
     <div class="request-content">
       <h3>{{title}}</h3>
-      <p>{{distance}}</p>
+      <span>Due: {{dueDate}}</span>
+      <br>
+      <span>Distance: {{distance}}</span>
+    <p>
+    	submitted by <strong>{{author}}</strong>
+    	{{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
+    </p>
+
     </div>
     <a href="{{pathFor "requestPage"}}" class="btn btn-default discuss">View</a>
   </div>
