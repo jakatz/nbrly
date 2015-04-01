@@ -1,18 +1,20 @@
 <template name="requestItem">
   <div class="request">
-    <div class="request-content">
-      <h3>{{title}}</h3>
-      <span>Due: {{dueDate}}</span>
-      <br>
-      <span>Distance: {{distance}}</span>
-    <p>
-    	submitted by <strong>{{author}}</strong>
-    	{{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
-    </p>
+    <div class="container">
+      <div class="request-content">
+        <h3>{{title}}</h3>
+        <span>Due: {{dueDate}}</span>
+        <br>
+        <span>Distance: {{distance}}</span>
+      <p>
+      	submitted by <strong>{{author}}</strong>
+      	{{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
+      </p>
 
-    {{description}}
+      {{description}}
 
-    </div>
-    <a href="{{pathFor "requestPage"}}" class="btn btn-default discuss">View</a>
+      </div>
+      <a href="{{pathFor "requestPage"}}" class="btn btn-default discuss">View</a>
+    </div>  
   </div>
 </template>

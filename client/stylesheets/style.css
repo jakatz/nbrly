@@ -21,10 +21,36 @@ body {
   width: 100%;
 }
 
+.request-title {
+  width:100%;
+  background-color: #F8F8F8; }
+
+  .request-title h3 {
+    margin:0;
+    text-align:center;
+    padding:20px;
+    color:#555;
+    font-weight:300;
+  }
+
 .map-container {
   width: 100%;
   height: 150px;
-  margin: 10px 0px;
+  margin: 0;  
+}
+
+.map-overlay {
+  z-index:99;
+  position:relative;
+  width:100%;
+  height: 150px;
+  margin: 0;
+  background-color:#fff;
+  opacity:0.3;
+}
+
+.nav {
+  /*background-color: #BEEB9F;*/
 }
 
 .navbar {

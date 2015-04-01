@@ -5,7 +5,11 @@ Template.map.helpers({
       // Map initialization options
       return {
         center: new google.maps.LatLng(37.7833, -122.4167),
-        zoom: 12
+        zoom: 12,
+        disableDefaultUI: true,
+        draggable:false,
+        zoomControl: false,
+        scrollwheel:false
       };
     }
   }
