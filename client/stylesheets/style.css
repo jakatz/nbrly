@@ -34,6 +34,8 @@ body {
   }
 
 .map-container {
+  position:absolute;
+  top:0;
   width: 100%;
   height: 150px;
   margin: 0;  
@@ -46,11 +48,7 @@ body {
   height: 150px;
   margin: 0;
   background-color:#fff;
-  opacity:0.3;
-}
-
-.nav {
-  /*background-color: #BEEB9F;*/
+  opacity:0.2;
 }
 
 .navbar {
