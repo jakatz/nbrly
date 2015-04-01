@@ -1,4 +1,7 @@
-Template.map.helpers({
+Template.requestPage.helpers({
+  requests: function() {
+    return Requests.find();
+  },
   mapOptions: function() {
     // Make sure the maps API has loaded
     if (GoogleMaps.loaded()) {
@@ -13,10 +16,9 @@ Template.map.helpers({
       };
     }
   }
-}); 
+});
 
-
-Template.map.onCreated(function() {
+Template.requestPage.onCreated(function() {
 // We can use the 'ready' callback to interact with the map API once the map is ready
   GoogleMaps.ready('mapBanner', function(map) {
     // Add a marker to the map once it's ready
