@@ -8,6 +8,7 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
 body {
+  font: 'PT Sans' 1.1em 300;
   background: #eee;
   color: #666666; }
 
@@ -30,7 +31,7 @@ body {
     text-align:center;
     padding:20px;
     color:#555;
-    font-weight:300;
+    font-family: 'PT Sans';
   }
 
 .map-container {
@@ -51,11 +52,20 @@ body {
   opacity:0.2;
 }
 
+.nav {
+  padding: 4px;
+}
+
 .navbar {
   margin-bottom: 10px; }
   /* line 32, ../sass/style.scss */
   .navbar .navbar-inner {
     border-radius: 0px 0px 3px 3px; }
+
+.nav .navbar-brand {
+  font-size: 1.5em;
+  margin-top:3px;
+}
 
 #spinner {
   height: 300px; }
@@ -90,9 +100,10 @@ body {
   .request .request-content {
     float: left; }
     .request .request-content h3 {
+      font-family: 'PT Sans';
       margin: 0;
       line-height: 1.4;
-      font-size: 18px; }
+      font-size: 19px; }
       .request .request-content h3 a {
         display: inline-block;
         margin-right: 5px; }
