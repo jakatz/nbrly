@@ -1,21 +1,24 @@
 <template name="requestSubmit">
 	<form class="main form page">
-		<div class="form-group">
+		<div class="form-group {{errorClass 'title'}}">
 			<label for="title" class="control-label">Title</label>
 			<div class="controls">
 				<input type="text" class="form-control" id="title" name="title" value="" placeholder="Give your request a title" />
+				<span class="help-block">{{errorMessage 'title'}}</span>
 			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group {{errorClass 'description'}}">
 			<label for="description" class="control-label">Description</label>
 			<div class="controls">
 				<input type="text" class="form-control" id="description" name="description" value="" placeholder="Please describe your request." />
+				<span class="help-block">{{errorMessage 'description'}}</span>
 			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group {{errorClass 'dueDate'}}">
 			<label for="due-date" class="control-label">Due Date</label>
 			<div class="controls">
 				<input type="text" class="form-control" id="date-picker" name="due-date" placeholder="Click here to enter a due date" />
+				<span class="help-block">{{errorMessage 'dueDate'}}</span>
 			</div>
 		</div>
 		<input type="submit" class="btn btn-primary" value="Submit" />
