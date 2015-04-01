@@ -1,3 +1,16 @@
+Template.requestEdit.created = function() {
+	Session.set('requestEditErrors', {});
+}
+
+Template.requestEdit.helpers({
+	errorMessage: function(field) {
+		return Session.get('requestEditErrors')[field];
+	},
+	errorClass: function(field) {
+		return !!Session.get('requestEditErrors')[field] ? 'has-error' : '';
+	}
+});
+
 Template.requestEdit.rendered = function() {
 	$('#date-picker').datepicker();
 }
@@ -14,10 +27,15 @@ Template.requestEdit.events({
 			dueDate: $(e.target).find('[name=due-date]').val()
 		}
 
+		var errors = validateRequest(requestProperties);
+		if (errors.title || errors.description || errors.dueDate) {
+			return Session.set('requestEditErrors', errors);
+		}
+
 		Requests.update(currentRequestId, {$set: requestProperties}, function(error) {
 			if (error) {
 				// display the error to the user
-				alert(error.reason);
+				throwError(error.reason);
 			} else {
 				Router.go('requestPage', {_id: currentRequestId});
 			}
