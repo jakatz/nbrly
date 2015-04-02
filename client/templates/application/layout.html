@@ -1,11 +1,9 @@
 <template name="layout">
-  <core-scaffold>
-    {{> header}}
-    <div class="container">
-      {{> errors}}
-    </div>  
-    <div id="main">
-        {{> yield}}
-    </div>
-  </core-scaffold>  
+  {{> header}}
+  <div class="container">
+    {{> errors}}
+  </div>  
+  <div id="main">
+    {{> yield}}
+  </div>
 </template>
