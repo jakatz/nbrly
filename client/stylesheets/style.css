@@ -12,6 +12,8 @@ body {
   background: #eee;
   color: #666666; }
 
+a { color:inherit; }
+
 #main {
   position: relative;
 }
@@ -35,15 +37,14 @@ body {
   }
 
 .map-container {
-  position:absolute;
-  top:0;
+/*  position:absolute;
+  top:0;*/
   width: 100%;
   height: 150px;
   margin: 0;  
 }
 
-.map-overlay {
-  z-index:99;
+/*.map-overlay {
   position:relative;
   width:100%;
   height: 150px;
@@ -51,7 +52,7 @@ body {
   background-color:#fff;
   opacity:0.2;
 }
-
+*/
 .nav {
   padding: 4px;
 }
