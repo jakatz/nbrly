@@ -1,3 +1,3 @@
 Meteor.publish("requests", function() {
-  return Requests.find();
-})
+	  return Requests.find({neighbor: null});
+});
