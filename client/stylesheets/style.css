@@ -19,8 +19,28 @@ a { color:inherit; }
 }
 
 #my-button {
-    background: green;
-    color: yellow;
+  background: green;
+  color: yellow;
+}
+
+.full {
+  width:100%;
+}
+
+.header-container {
+  height:70px;
+  background-color: #3F51B5;
+  color:#fff;
+}
+
+.btn-accept {
+  background-color: #0F9D58;
+  color:#fff;
+}
+
+.btn-prim {
+  background-color: #2196F3;
+  color:#fff;
 }
 
 .page {
@@ -30,6 +50,7 @@ a { color:inherit; }
 }
 
 .request-title {
+  margin-bottom: 20px;
   width:100%;
   background-color: #F8F8F8; }
 
@@ -71,6 +92,10 @@ a { color:inherit; }
 .nav .navbar-brand {
   font-size: 1.5em;
   margin-top:3px;
+}
+
+.space-bottom-2 {
+  margin-bottom: 20px;
 }
 
 #spinner {

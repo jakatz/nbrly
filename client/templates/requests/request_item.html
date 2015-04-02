@@ -1,21 +1,28 @@
 <template name="requestItem">
-  <div class="request" data-rid="request_{{_id}}" horizontal layout>
-    <div class="request-content">
-      <h3>{{title}}</h3>
-      <span>Due: {{dueDate}}</span>
-      <br>
-      <span>Distance: {{distance}}</span>
-      <p>
-      	submitted by <strong>{{author}}</strong>
-      	{{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
-      </p>
+  <div horizontal layout class="space-top-2">
+    <div flex one></div>
+    <div flex ten>
+      <div class="request full" data-rid="request_{{_id}}"> 
+        <div flex nine>
+          <div class="request-content">
+            <h3>{{title}}</h3>
+            <span>Due: {{dueDate}}</span>
+            <br>
+            <span>Distance: {{distance}}</span>
+            <p>
+              submitted by <strong>{{author}}</strong>
+              {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
+            </p>
 
-      {{description}}
+            {{description}}
+          </div>
+        </div>      
+        <div flex three>
+          <a href="{{pathFor 'requestPage'}}" class="discuss"><paper-button raised>View</paper-button></a>      
+          <a class="accept" href="#"><paper-button raised class="btn-accept">Accept Request</paper-button></a>
+        </div>
+      </div>    
     </div>
-    <div flex></div>
-    <div>  
-      <a href="{{pathFor 'requestPage'}}" class="discuss"><paper-button raised>View</paper-button></a>      
-      <a class="accept" href="#"><paper-button raised>Accept Request</paper-button></a>
-    </div>  
+    <div flex one></div>    
   </div> 
 </template>

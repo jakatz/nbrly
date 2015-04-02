@@ -1,18 +1,21 @@
 <template name="header">
     <!-- <core-header-panel navigation flex mode="seamed"> -->
+  <div class="header-container">  
+    <core-header-panel>
       <core-toolbar>
-        <div horizontal layout>
-          <div>
+        <div horizontal layout class="full">
+          <div flex one>
+          </div>
+          <div flex nine>
             <a href="{{pathFor "requestsList"}}">Neighborly</a>
           </div>  
-          <div>
-            {{#if currentUser}}<a href="{{pathFor 'requestSubmit'}}">Submit Request</a>{{/if}}
-          </div>
-          <div>
+          <div flex two>
             {{> loginButtons}}
           </div>
         </div>
       </core-toolbar>  
+    </core-header-panel>  
+  </div>  
       <core-menu theme="core-light-theme">
 <!--         <core-item icon="settings" label="item1"></core-item>
         <core-item icon="settings" label="item2"></core-item> -->
