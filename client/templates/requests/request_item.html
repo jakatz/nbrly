@@ -1,5 +1,5 @@
 <template name="requestItem">
-  <div class="request">
+  <div class="request" data-rid="request_{{_id}}">
     <div class="request-content">
       <h3>{{title}}</h3>
       <span>Due: {{dueDate}}</span>
@@ -13,6 +13,7 @@
     {{description}}
 
     </div>
-    <a href="{{pathFor "requestPage"}}" class="btn btn-default discuss">View</a>
+    <a href="{{pathFor 'requestPage'}}" class="btn btn-default discuss">View</a>
+    <a class="btn btn-success accept" href="#">Accept Request</a>
   </div>
 </template>
