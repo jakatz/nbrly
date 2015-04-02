@@ -24,3 +24,6 @@ node_modules
 .git
 .build*
 packages/
+
+## API Secrets ##
+server/service-config.js
