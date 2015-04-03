@@ -14,6 +14,14 @@ body {
 
 a { color:inherit; }
 
+li {
+  list-style: none;
+}
+
+#login-dropdown-list {
+  margin-top:10px;
+}
+
 #main {
   position: relative;
 }
@@ -27,8 +35,12 @@ a { color:inherit; }
   width:100%;
 }
 
+.title {
+  font-size:1.3em;
+}
+
 .header-container {
-  height:70px;
+  height:85px;
   background-color: #3F51B5;
   color:#fff;
 }
@@ -92,6 +104,10 @@ a { color:inherit; }
 .nav .navbar-brand {
   font-size: 1.5em;
   margin-top:3px;
+}
+
+.space-top-05 {
+  margin-top:5px;
 }
 
 .space-bottom-2 {
