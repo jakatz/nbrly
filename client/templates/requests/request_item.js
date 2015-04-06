@@ -1,6 +1,10 @@
 Template.requestItem.helpers({
 	ownRequest: function() {
 		return this.userId === Meteor.userId();
+	},
+
+	notAccepted: function() {
+		return this.neighbor === null;
 	}
 });
 
@@ -11,7 +15,7 @@ Template.requestItem.events({
 		var user = Meteor.user();
 		var currentRequestId = this._id;
 		var accepted = {
-			neighbor: user
+			neighbor: user._id
 		}
 
 		Requests.update({_id: currentRequestId}, {$set: accepted}, function(error) {

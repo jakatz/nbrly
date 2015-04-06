@@ -1,7 +1,7 @@
-Meteor.publish("newRequests", function() {
-	 return Requests.find({neighbor: null});
+Meteor.publish("requests", function() {
+	 return Requests.find({neighbor:null});
 });
 
-Meteor.publish("acceptedRequests", function(requestId) {
-	return Requests.find({}, {requestId: user})
+Meteor.publish("myRequests", function() {
+	 return Requests.find({neighbor:this.userId});
 });

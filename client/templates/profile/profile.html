@@ -1,6 +1,7 @@
 <template name="userProfile">
-	Username: {{username}}<br>
-	{{#with profile}}
-		Profile name : {{name}}
-	{{/with}}
+	<h2>Your Tasks</h2>
+
+		{{#each requests}}
+			{{>	requestItem}}
+		{{/each}}
 </template>

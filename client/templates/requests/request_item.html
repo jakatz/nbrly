@@ -13,7 +13,10 @@
     {{description}}
 
     </div>
+
+    {{#if notAccepted}}
     <a href="{{pathFor 'requestPage'}}" class="btn btn-default discuss">View</a>
     <a class="btn btn-success accept" href="#">Accept Request</a>
+    {{/if}}
   </div>
 </template>
