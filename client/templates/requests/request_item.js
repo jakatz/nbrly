@@ -4,7 +4,7 @@ Template.requestItem.helpers({
 	},
 
 	notAccepted: function() {
-		return this.acceptor === null;
+		return (this.acceptor === null);
 	}
 });
 
