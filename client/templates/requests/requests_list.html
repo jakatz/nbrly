@@ -1,6 +1,10 @@
 <template name="requestsList">
 	{{> map}}
   <div class="requests">
+		{{#if zeroRequests}}
+			<h3>There are currently no requests.  Submit a request by clicking the 'submit request' button at the top of the page!</h3>
+		{{/if}}
+
     {{#each requests}}
     	{{> requestItem}}
     {{/each}}

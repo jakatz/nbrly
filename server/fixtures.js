@@ -4,13 +4,13 @@ if (Requests.find().count() === 0) {
     distance: "5 miles",
     dueDate: "5/6/15",
     author: "Jon",
-    neighbor: null
+    acceptor: null
   });
   Requests.insert({
     title: "Need help!",
     distance: "10 miles",
     dueDate: "6/7/15",
     author: "Connor",
-    neighbor: null
+    acceptor: null
   });
 }

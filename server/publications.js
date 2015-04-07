@@ -1,7 +1,7 @@
 Meteor.publish("requests", function() {
-	 return Requests.find({neighbor:null});
+	return Requests.find( {acceptor: null});
 });
 
 Meteor.publish("myRequests", function() {
-	 return Requests.find({neighbor:this.userId});
+	return Requests.find({ acceptor: this.userId });
 });
