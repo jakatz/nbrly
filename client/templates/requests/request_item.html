@@ -21,5 +21,36 @@
 
       {{/unless}}
     {{/if}}
+  <div horizontal layout class="space-top-2">
+    <div flex one></div>
+    <div flex ten>
+      <div class="request full" data-rid="request_{{_id}}"> 
+        <div flex nine>
+          <div class="request-content">
+            <h3>{{title}}</h3>
+            <span>Due: {{dueDate}}</span>
+            <br>
+            <span>Distance: {{distance}}</span>
+            <p>
+              submitted by <strong>{{author}}</strong>
+              {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
+            </p>
+
+            {{description}}
+          </div>
+        </div>      
+        <div flex three>
+        {{#if notAccepted}}
+          <a href="{{pathFor 'requestPage'}}" class="discuss vert-center"><paper-button raised>View</paper-button></a>      
+          {{#unless ownRequest}}
+          <a class="accept vert-center" href="#"><paper-button raised class="btn-accept">Accept Request</paper-button></a>
+          {{/unless}}
+        {{/if}}
+        </div>
+      </div>    
+    </div>
+
+>>>>>>> 4c9ca292025d3e8494a23e44d37df32c5f05b5e9
   </div>
+  <div flex one></div>    
 </template>

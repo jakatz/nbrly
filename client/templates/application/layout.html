@@ -1,9 +1,9 @@
 <template name="layout">
-  {{> header}}
   <div class="container">
+    {{> header}}
     {{> errors}}
-  </div>  
-  <div id="main">
+    <div id="main">
       {{> yield}}
+    </div>
   </div>
 </template>
