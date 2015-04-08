@@ -1,12 +1,9 @@
 <template name="layout">
-  {{> header}}
   <div class="container">
+    {{> header}}
     {{> errors}}
-  </div>  
-  <div id="main">
-    {{> yield}}
+    <div id="main">
+      {{> yield}}
+    </div>
   </div>
-  {{#if currentUser}}
-    <a href="{{pathFor 'requestSubmit'}}"><paper-fab icon="add"></paper-fab></a>
-  {{/if}}
 </template>
