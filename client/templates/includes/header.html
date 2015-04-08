@@ -7,16 +7,13 @@
           </div>
           <div flex eight class="space-top-05">
             <div horizontal layout class="full">
-              <div flex three>
+              <div flex two>
                 <ul class="inline">
                 <li><a href="{{pathFor 'requestsList'}}" class="title">Neighborly</a></li>
                 </ul>
               </div>
-              <div flex nine>
+              <div flex ten>
                 <ul class="inline nav-center">
-                {{#if currentUser}}
-                <li><a href="{{pathFor 'requestSubmit'}}">Submit Request</a></li>
-                {{/if}}
                 {{#with currentUser}}
                 <li><a href="{{pathFor 'userProfile'}}">View Tasks</a></li>
                 {{/with}}

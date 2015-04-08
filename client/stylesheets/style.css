@@ -31,6 +31,10 @@ li {
   color: yellow;
 }
 
+.container {
+  position:relative;
+}
+
 .full {
   width:100%;
 }
@@ -45,6 +49,16 @@ ul.inline {
   margin: 0 10px;
 }
 
+.add-request {
+  position:absolute;
+  right:0;
+}
+
+.add-container {
+  height:80px;
+  margin-top:20px;
+}
+
 .title {
   font-size:1.3em;
   position: relative;
@@ -56,6 +70,7 @@ ul.inline {
 
 ul.nav-center {
   margin-top:17px;
+  margin-left:20px;
 }
 
 .header-container {
