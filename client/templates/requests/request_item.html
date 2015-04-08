@@ -2,52 +2,31 @@
   <div horizontal layout class="space-top-2">
     <div flex>
       <div class="request" data-rid="request_{{_id}}">
-        <div class="request-content">
-          <h3>{{title}}</h3>
-          <span>Due: {{dueDate}}</span>
-          <br>
-          <span>Distance: {{distance}}</span>
-        <p>
-          submitted by <strong>{{author}}</strong>
-          {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
-        </p>
-
-          {{description}}
-        </div>
-
-        {{#if notAccepted}}
-        <a href="{{pathFor 'requestPage'}}" class="btn btn-default discuss">View</a>
-
-          {{#unless ownRequest}}
-          <a class="btn btn-success accept" href="#">Accept Request</a>
-
-          {{/unless}}
-        {{/if}}
-      </div> 
-      <div class="request full" data-rid="request_{{_id}}"> 
         <div flex nine>
           <div class="request-content">
             <h3>{{title}}</h3>
             <span>Due: {{dueDate}}</span>
             <br>
             <span>Distance: {{distance}}</span>
-            <p>
-              submitted by <strong>{{author}}</strong>
-              {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
-            </p>
+          <p>
+            submitted by <strong>{{author}}</strong>
+            {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
+          </p>
 
             {{description}}
           </div>
-        </div>      
+        </div>
         <div flex three>
         {{#if notAccepted}}
-          <a href="{{pathFor 'requestPage'}}" class="discuss vert-center"><paper-button raised>View</paper-button></a>      
+          <a href="{{pathFor 'requestPage'}}" class="vert-center discuss"><paper-button raised>View</paper-button></a>
+
           {{#unless ownRequest}}
-          <a class="accept vert-center" href="#"><paper-button raised class="btn-accept">Accept Request</paper-button></a>
+          <a class="vert-center accept" href="#"><paper-button raised class="btn-accept">Accept Request</paper-button></a>
+
           {{/unless}}
         {{/if}}
-        </div>
-      </div>    
+        </div> 
+      </div>   
     </div>
   </div>    
 </template>
