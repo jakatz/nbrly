@@ -8,11 +8,51 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
 body {
+  font: 'PT Sans' 1.1em 300;
   background: #eee;
   color: #666666; }
 
+a { color:inherit; }
+
+li {
+  list-style: none;
+}
+
+#login-dropdown-list {
+  margin-top:10px;
+}
+
 #main {
   position: relative;
+}
+
+#my-button {
+  background: green;
+  color: yellow;
+}
+
+.full {
+  width:100%;
+}
+
+.title {
+  font-size:1.3em;
+}
+
+.header-container {
+  height:85px;
+  background-color: #3F51B5;
+  color:#fff;
+}
+
+.btn-accept {
+  background-color: #0F9D58;
+  color:#fff;
+}
+
+.btn-prim {
+  background-color: #2196F3;
+  color:#fff;
 }
 
 .page {
@@ -21,10 +61,38 @@ body {
   width: 100%;
 }
 
+.request-title {
+  margin-bottom: 20px;
+  width:100%;
+  background-color: #F8F8F8; }
+
+  .request-title h3 {
+    margin:0;
+    text-align:center;
+    padding:20px;
+    color:#555;
+    font-family: 'PT Sans';
+  }
+
 .map-container {
+/*  position:absolute;
+  top:0;*/
   width: 100%;
   height: 150px;
-  margin: 10px 0px;
+  margin-top: -12px;  
+}
+
+/*.map-overlay {
+  position:relative;
+  width:100%;
+  height: 150px;
+  margin: 0;
+  background-color:#fff;
+  opacity:0.2;
+}
+*/
+.nav {
+  padding: 4px;
 }
 
 .navbar {
@@ -32,6 +100,24 @@ body {
   /* line 32, ../sass/style.scss */
   .navbar .navbar-inner {
     border-radius: 0px 0px 3px 3px; }
+
+.nav .navbar-brand {
+  font-size: 1.5em;
+  margin-top:3px;
+}
+
+.vert-center {
+  position: relative;
+  transform: translateY(40%);
+}
+
+.space-top-05 {
+  margin-top:5px;
+}
+
+.space-bottom-2 {
+  margin-bottom: 20px;
+}
 
 #spinner {
   height: 300px; }
@@ -66,9 +152,10 @@ body {
   .request .request-content {
     float: left; }
     .request .request-content h3 {
+      font-family: 'PT Sans';
       margin: 0;
       line-height: 1.4;
-      font-size: 18px; }
+      font-size: 19px; }
       .request .request-content h3 a {
         display: inline-block;
         margin-right: 5px; }

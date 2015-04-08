@@ -1,6 +1,23 @@
 <template name="header">
-  <nav class="nav navbar-default" role="navigation">
-    <div class="container-fluid">
+  <div class="header-container">  
+    <core-header-panel>
+      <core-toolbar>
+        <div horizontal layout class="full">
+          <div flex one>
+          </div>
+          <div flex nine class="space-top-05">
+            <a href="{{pathFor "requestsList"}}" class="title">Neighborly</a>
+          </div>  
+          <div flex two>
+            {{> loginButtons}}
+          </div>
+        </div>
+      </core-toolbar>  
+    </core-header-panel>  
+  </div>   
+
+  <!-- <nav class="nav navbar-default" role="navigation">
+    <div class="container">
       <div class="navbar-header">
         <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navigation">
           <span class="sr-only">Toggle Navigation</span>
@@ -24,5 +41,5 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 </template>
