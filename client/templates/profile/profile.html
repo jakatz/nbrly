@@ -1,7 +1,13 @@
 <template name="userProfile">
 	<h2>Your Tasks</h2>
 
-		{{#each requests}}
+		{{#each yourTasks}}
 			{{>	requestItem}}
+		{{/each}}
+
+	<h2>Your Accepted Requests</h2>
+
+		{{#each yourAcceptedRequests}}
+			{{> requestItem}}
 		{{/each}}
 </template>

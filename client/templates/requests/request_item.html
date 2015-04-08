@@ -25,6 +25,12 @@
 
           {{/unless}}
         {{/if}}
+
+        {{#if acceptedRequest}}
+            {{#unless ownRequest}}
+              <a class="vert-center mark-complete" href="#"><paper-button class="btn-accept">Mark Complete</paper-button></a>
+            {{/unless}}
+        {{/if}}
         </div> 
       </div>   
     </div>

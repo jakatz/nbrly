@@ -1,6 +1,6 @@
 Template.requestsList.helpers({
   requests: function() {
-    return Requests.find({}, {sort: {submitted: -1}});
+    return Requests.find({ acceptor: null }, {sort: {submitted: -1}});
   },
 
   zeroRequests: function() {

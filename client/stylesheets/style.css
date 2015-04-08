@@ -14,8 +14,14 @@ body {
 
 a { color:inherit; }
 
+.header-container a:hover { color: yellow; }
+
 li {
   list-style: none;
+}
+
+.mark-complete {
+  float: right;
 }
 
 #login-dropdown-list {

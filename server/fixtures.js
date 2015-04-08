@@ -4,6 +4,7 @@ if (Requests.find().count() === 0) {
     distance: "5 miles",
     dueDate: "5/6/15",
     author: "Jon",
+    completed: false,
     acceptor: null
   });
   Requests.insert({
@@ -11,6 +12,7 @@ if (Requests.find().count() === 0) {
     distance: "10 miles",
     dueDate: "6/7/15",
     author: "Connor",
+    completed: false,
     acceptor: null
   });
 }

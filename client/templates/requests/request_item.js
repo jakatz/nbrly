@@ -27,5 +27,17 @@ Template.requestItem.events({
 				Router.go('requestsList');
 			}
 		});
+	},
+
+	'click .mark-complete': function(e) {
+		e.preventDefault();
+
+		var currentRequestId = this._id;
+
+		Requests.update({ _id: currentRequestId}, {$set: {completed: true}}, function(error) {
+			if (error) {
+				throwError(error.reason);
+			}
+		});
 	}
 });
