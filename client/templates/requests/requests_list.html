@@ -9,5 +9,12 @@
     {{#each requests}}
     	{{> requestItem}}
     {{/each}}
+
+    {{#if currentUser}}
+    <div class="add-container">
+      <a href="{{pathFor 'requestSubmit'}}"><paper-fab icon="add" class="add-request"></paper-fab></a>
+    </div>  
+    {{/if}}
   </div>
+
 </template>

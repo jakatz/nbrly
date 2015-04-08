@@ -31,12 +31,46 @@ li {
   color: yellow;
 }
 
+.container {
+  position:relative;
+}
+
 .full {
   width:100%;
 }
 
+ul.inline {
+  margin: 10px;
+  padding-left:0;
+}
+
+.inline li {
+  display:inline-block;
+  margin: 0 10px;
+}
+
+.add-request {
+  position:absolute;
+  right:0;
+}
+
+.add-container {
+  height:80px;
+  margin-top:20px;
+}
+
 .title {
   font-size:1.3em;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+ul.nav-center {
+  margin-top:17px;
+  margin-left:20px;
 }
 
 .header-container {
