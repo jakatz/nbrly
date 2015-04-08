@@ -18,20 +18,16 @@
           </div>
         </div>      
         <div flex three>
+        {{#if notAccepted}}
           <a href="{{pathFor 'requestPage'}}" class="discuss vert-center"><paper-button raised>View</paper-button></a>      
+          {{#unless ownRequest}}
           <a class="accept vert-center" href="#"><paper-button raised class="btn-accept">Accept Request</paper-button></a>
+          {{/unless}}
+        {{/if}}
         </div>
       </div>    
     </div>
 
-    {{#if notAccepted}}
-    <a href="{{pathFor 'requestPage'}}" class="btn btn-default discuss">View</a>
-
-      {{#unless ownRequest}}
-      <a class="btn btn-success accept" href="#">Accept Request</a>
-
-      {{/unless}}
-    {{/if}}
   </div>
   <div flex one></div>    
 </template>
