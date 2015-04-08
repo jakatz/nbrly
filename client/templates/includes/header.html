@@ -8,11 +8,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>        
-        <a href="{{pathFor "requestsList"}}" class="navbar-brand">Neighborly</a>
+        <a href="{{pathFor 'requestsList'}}" class="navbar-brand">Neighborly</a>
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
-          {{#if currentUser}}<li><a href="{{pathFor 'requestSubmit'}}">Submit Request</a></li>{{/if}}
+          {{#if currentUser}}
+          <li><a href="{{pathFor 'requestSubmit'}}">Submit Request</a></li>
+          {{/if}}
+          {{#with currentUser}}
+          <li><a href="{{pathFor 'userProfile'}}">View Tasks</a></li>
+          {{/with}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}

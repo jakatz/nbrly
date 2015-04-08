@@ -27,3 +27,4 @@ packages/
 
 ## API Secrets ##
 server/service-config.js
+private/

@@ -3,7 +3,6 @@ iron:router
 twbs:bootstrap
 underscore
 dburles:google-maps
-meteorhacks:kadira
 sacha:spin
 ian:accounts-ui-bootstrap-3
 accounts-password
