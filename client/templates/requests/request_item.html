@@ -1,29 +1,29 @@
-<template name="requestItem">
-  <div class="request" data-rid="request_{{_id}}">
-    <div class="request-content">
-      <h3>{{title}}</h3>
-      <span>Due: {{dueDate}}</span>
-      <br>
-      <span>Distance: {{distance}}</span>
-    <p>
-    	submitted by <strong>{{author}}</strong>
-    	{{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
-    </p>
-
-      {{description}}
-    </div>
-
-    {{#if notAccepted}}
-    <a href="{{pathFor 'requestPage'}}" class="btn btn-default discuss">View</a>
-
-      {{#unless ownRequest}}
-      <a class="btn btn-success accept" href="#">Accept Request</a>
-
-      {{/unless}}
-    {{/if}}
+<template name="requestItem"> 
   <div horizontal layout class="space-top-2">
-    <div flex one></div>
-    <div flex ten>
+    <div flex>
+      <div class="request" data-rid="request_{{_id}}">
+        <div class="request-content">
+          <h3>{{title}}</h3>
+          <span>Due: {{dueDate}}</span>
+          <br>
+          <span>Distance: {{distance}}</span>
+        <p>
+          submitted by <strong>{{author}}</strong>
+          {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
+        </p>
+
+          {{description}}
+        </div>
+
+        {{#if notAccepted}}
+        <a href="{{pathFor 'requestPage'}}" class="btn btn-default discuss">View</a>
+
+          {{#unless ownRequest}}
+          <a class="btn btn-success accept" href="#">Accept Request</a>
+
+          {{/unless}}
+        {{/if}}
+      </div> 
       <div class="request full" data-rid="request_{{_id}}"> 
         <div flex nine>
           <div class="request-content">
@@ -49,8 +49,5 @@
         </div>
       </div>    
     </div>
-
->>>>>>> 4c9ca292025d3e8494a23e44d37df32c5f05b5e9
-  </div>
-  <div flex one></div>    
+  </div>    
 </template>

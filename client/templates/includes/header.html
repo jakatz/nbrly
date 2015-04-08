@@ -5,22 +5,31 @@
         <div horizontal layout class="full">
           <div flex one>
           </div>
-          <div flex nine class="space-top-05">
-            <a href="{{pathFor "requestsList"}}" class="title">Neighborly</a>
+          <div flex eight class="space-top-05">
+            <div horizontal layout class="full">
+              <div flex three>
+                <ul class="inline">
+                <li><a href="{{pathFor 'requestsList'}}" class="title">Neighborly</a></li>
+                </ul>
+              </div>
+              <div flex nine>
+                <ul class="inline nav-center">
+                {{#if currentUser}}
+                <li><a href="{{pathFor 'requestSubmit'}}">Submit Request</a></li>
+                {{/if}}
+                {{#with currentUser}}
+                <li><a href="{{pathFor 'userProfile'}}">View Tasks</a></li>
+                {{/with}}
+                </ul>
+              </div>  
+            </div>  
           </div>  
-          <div flex two>
-          <ul class="nav navbar-nav">
-          {{#if currentUser}}
-          <li><a href="{{pathFor 'requestSubmit'}}">Submit Request</a></li>
-          {{/if}}
-          {{#with currentUser}}
-          <li><a href="{{pathFor 'userProfile'}}">View Tasks</a></li>
-          {{/with}}
-          </ul>
-        <ul class="nav navbar-nav navbar-right">
-            {{> loginButtons}}
-        </ul>    
+          <div flex two class="space-top-05">
+            <ul class="nav-center">
+              {{> loginButtons}}
+            </ul>    
           </div>
+          <div flex one></div>
         </div>
       </core-toolbar>  
     </core-header-panel>  
