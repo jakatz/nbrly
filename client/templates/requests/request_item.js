@@ -5,10 +5,6 @@ Template.requestItem.helpers({
 
 	notAccepted: function() {
 		return (this.acceptor === null);
-	},
-
-	commentsCount: function() {
-		return Comments.find({ requestId: this._id}).count();
 	}
 });
 

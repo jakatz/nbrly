@@ -19,7 +19,8 @@ if (Requests.find().count() === 0) {
     author: jon.username,
     completed: false,
     acceptor: null,
-    submitted: new Date(now - 7 * 3600 * 1000)
+    submitted: new Date(now - 7 * 3600 * 1000),
+    commentsCount: 2
   });
 
   Comments.insert({
@@ -44,7 +45,9 @@ if (Requests.find().count() === 0) {
     dueDate: "5/6/15",
     author: connor.username,
     completed: false,
-    acceptor: jon._id
+    acceptor: jon._id,
+    submitted: new Date(now - 10 * 3600 * 1000),
+    commentsCount: 0
   });
   Requests.insert({
     title: "Need help!",
@@ -52,6 +55,8 @@ if (Requests.find().count() === 0) {
     dueDate: "6/7/15",
     author: connor.username,
     completed: false,
-    acceptor: null
+    acceptor: null,
+    submitted: new Date(now - 12 * 3600 * 1000),
+    commentsCount: 0
   });
 }
