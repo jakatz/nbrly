@@ -2,6 +2,10 @@ Meteor.publish("requests", function() {
 	return Requests.find();
 });
 
+Meteor.publish("comments", function() {
+	return Comments.find();
+});
+
 // Meteor.publish("requests", function() {
 // 	return Requests.find( {acceptor: null});
 // });
