@@ -1,7 +1,12 @@
 <template name="requestPage">
   {{> map}}
   <div class="request-title"><h3>Request</h3></div>
-  <div class="request-page">
+  <div class="request-page page">
     {{> requestItem}}    
+    <ul class="comments">
+    	{{#each comments}}
+    		{{> commentItem}}
+    	{{/each}}
+    </ul>
   </div>
 </template>

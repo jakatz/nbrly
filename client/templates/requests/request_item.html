@@ -9,7 +9,8 @@
             <br>
             <span>Distance: {{distance}}</span>
           <p>
-            submitted by <strong>{{author}}</strong>
+            submitted by <strong>{{author}}</strong>,
+            <a href="{{pathFor 'requestPage'}}">{{commentsCount}} comments</a>
             {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
           </p>
 

@@ -2,6 +2,11 @@ Template.requestPage.helpers({
   requests: function() {
     return Requests.find();
   },
+
+  comments: function() {
+    return Comments.find({requestId: this._id});
+  },
+  
   mapOptions: function() {
     // Make sure the maps API has loaded
     if (GoogleMaps.loaded()) {
