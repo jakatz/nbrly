@@ -2,8 +2,9 @@ Meteor.publish("requests", function() {
 	return Requests.find();
 });
 
-Meteor.publish("comments", function() {
-	return Comments.find();
+Meteor.publish("comments", function(requestId) {
+	check(requestId, String);
+	return Comments.find({requestId: requestId});
 });
 
 // Meteor.publish("requests", function() {
