@@ -24,10 +24,6 @@ li {
   float: right;
 }
 
-#login-dropdown-list {
-  margin-top:10px;
-}
-
 #main {
   position: relative;
 }
@@ -45,7 +41,15 @@ li {
   width:100%;
 }
 
-ul.inline {
+.vCenter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 85px;
+  margin-bottom: 0;
+}
+
+/*ul.inline {
   margin: 10px;
   padding-left:0;
 }
@@ -53,7 +57,7 @@ ul.inline {
 .inline li {
   display:inline-block;
   margin: 0 10px;
-}
+}*/
 
 .add-request {
   position:absolute;
