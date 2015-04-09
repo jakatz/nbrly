@@ -18,6 +18,12 @@
                 <li><a href="{{pathFor 'userProfile'}}">View Tasks</a></li>
                 {{/with}}
                 </ul>
+
+                {{#if currentUser}}
+                  <li class="dropdown">
+                    {{> notifications}}
+                  </li>
+                {{/if}}
               </div>  
             </div>  
           </div>  
