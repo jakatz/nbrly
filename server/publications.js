@@ -8,7 +8,7 @@ Meteor.publish("comments", function(requestId) {
 });
 
 Meteor.publish("notifications", function() {
-	return Notifications.find();
+	return Notifications.find({userId: this.userId, read: false});
 });
 
 // Meteor.publish("requests", function() {
