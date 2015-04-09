@@ -7,6 +7,10 @@ Meteor.publish("comments", function(requestId) {
 	return Comments.find({requestId: requestId});
 });
 
+Meteor.publish("notifications", function() {
+	return Notifications.find();
+});
+
 // Meteor.publish("requests", function() {
 // 	return Requests.find( {acceptor: null});
 // });
