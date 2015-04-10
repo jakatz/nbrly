@@ -14,7 +14,15 @@ body {
 
 a { color:inherit; }
 
-.header-container a:hover { color: yellow; }
+a:focus { color:inherit; }
+
+.header-container a:hover { 
+  color: #eee; 
+}
+
+#signup-link {
+  color:#666;
+}
 
 li {
   list-style: none;
@@ -22,10 +30,6 @@ li {
 
 .mark-complete {
   float: right;
-}
-
-#login-dropdown-list {
-  margin-top:10px;
 }
 
 #main {
@@ -45,14 +49,12 @@ li {
   width:100%;
 }
 
-ul.inline {
-  margin: 10px;
-  padding-left:0;
-}
-
-.inline li {
-  display:inline-block;
-  margin: 0 10px;
+.vCenter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 85px;
+  margin-bottom: 0;
 }
 
 .add-request {

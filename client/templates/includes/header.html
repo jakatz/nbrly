@@ -7,28 +7,31 @@
           </div>
           <div flex eight class="space-top-05">
             <div horizontal layout class="full">
-              <div flex two>
-                <ul class="inline">
+              <div>
+                <ul class="vCenter">
                 <li><a href="{{pathFor 'requestsList'}}" class="title">Neighborly</a></li>
                 </ul>
               </div>
-              <div flex ten>
-                <ul class="inline nav-center">
+              <div>
+                <ul class="vCenter">
                 {{#with currentUser}}
                 <li><a href="{{pathFor 'userProfile'}}">View Tasks</a></li>
                 {{/with}}
                 </ul>
-
+              </div>
+              <div>
                 {{#if currentUser}}
+                <ul class="vCenter">
                   <li class="dropdown">
                     {{> notifications}}
                   </li>
+                </ul>  
                 {{/if}}
               </div>  
             </div>  
           </div>  
           <div flex two class="space-top-05">
-            <ul class="nav-center">
+            <ul class="vCenter">
               {{> loginButtons}}
             </ul>    
           </div>
