@@ -10,18 +10,18 @@
     	{{> requestItem}}
     {{/each}}
 
-    {{#if currentUser}}
-    <div class="add-container">
-      <a href="{{pathFor 'requestSubmit'}}"><paper-fab icon="add" class="add-request"></paper-fab></a>
-    </div>  
-    {{/if}}
-
     {{#if nextPath}}
       <a href="{{nextPath}}" class="load-more">Load more requests</a>
     {{else}}
       {{#unless ready}}
         {{> spinner}}
       {{/unless}}
+    {{/if}}
+
+    {{#if currentUser}}
+    <div class="add-container">
+      <a href="{{pathFor 'requestSubmit'}}" class="add-request"><span class="request-button-text">Submit Request -></span><paper-fab icon="add"></paper-fab></a>
+    </div>  
     {{/if}}
   </div>
 
