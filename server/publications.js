@@ -6,6 +6,11 @@ Meteor.publish("requests", function(options) {
 	return Requests.find({}, options);
 });
 
+Meteor.publish("singleRequest", function(id) {
+	check(id, String)
+	return Requests.find(id);
+});
+
 Meteor.publish("comments", function(requestId) {
 	check(requestId, String);
 	return Comments.find({requestId: requestId});
