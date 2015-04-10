@@ -49,12 +49,28 @@ li {
   width:100%;
 }
 
+.login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 85px;
+  margin-bottom: 0;
+}
+
+.login li {
+  margin: 0 auto;
+}
+
 .vCenter {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 85px;
   margin-bottom: 0;
+}
+
+.vCenter li {
+  margin:0 auto;
 }
 
 .add-request {
@@ -88,7 +104,7 @@ ul.nav-center {
 }
 
 .btn-accept {
-  background-color: #0F9D58;
+  background-color: #5CB85C;
   color:#fff;
 }
 
@@ -117,22 +133,10 @@ ul.nav-center {
   }
 
 .map-container {
-/*  position:absolute;
-  top:0;*/
   width: 100%;
-  height: 150px;
-  margin-top: -12px;  
+  height: 150px;  
 }
 
-/*.map-overlay {
-  position:relative;
-  width:100%;
-  height: 150px;
-  margin: 0;
-  background-color:#fff;
-  opacity:0.2;
-}
-*/
 .nav {
   padding: 4px;
 }
@@ -294,4 +298,45 @@ ul.nav-center {
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+
+@media (max-width:1000px) {
+  .vCenter {
+    padding-left:15px;
+  }
+}
+
+@media (max-width: 750px) {
+  div.header-container {
+    font-size:0.9em;
+  }
+}
+
+@media (max-width: 550px) {
+  div.header-container {
+    font-size:0.8em;
+  }
+  .login {
+    font-size:1em;
+    padding-left: 0;
+  }
+
+  paper-button.btn-accept {
+    width: 95%;
+  }
+
+  ul.vCenter {
+    padding-left: 0px;
+    margin-right: 5px;
+  }
+
+  .vert-center {
+    transform: translateY(5%);
+  }
+}
+
+@media (max-width:500px) {
+  div.header-container {
+    font-size:0.7em;
+  }
 }
