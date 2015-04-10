@@ -15,6 +15,10 @@
       <a href="{{pathFor 'requestSubmit'}}"><paper-fab icon="add" class="add-request"></paper-fab></a>
     </div>  
     {{/if}}
+
+    {{#if nextPath}}
+      <a href="{{nextPath}}" class="load-more">Load more requests</a>
+    {{/if}}
   </div>
 
 </template>
