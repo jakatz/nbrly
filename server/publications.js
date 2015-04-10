@@ -1,5 +1,9 @@
-Meteor.publish("requests", function() {
-	return Requests.find();
+Meteor.publish("requests", function(options) {
+	check(options, {
+		sort: Object,
+		limit: Number
+	});
+	return Requests.find({}, options);
 });
 
 Meteor.publish("comments", function(requestId) {

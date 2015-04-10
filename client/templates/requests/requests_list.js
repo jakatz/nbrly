@@ -1,10 +1,6 @@
 Template.requestsList.helpers({
-  requests: function() {
-    return Requests.find({ acceptor: null }, {sort: {submitted: -1}});
-  },
-
   zeroRequests: function() {
-  	if (Requests.find().count() === 0) {
+  	if (Requests.find({acceptor: null}).count() === 0) {
   		return true;
   	}
   }

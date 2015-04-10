@@ -6,8 +6,8 @@ dburles:google-maps
 sacha:spin
 ian:accounts-ui-bootstrap-3
 accounts-password
-accounts-facebook
 
 service-configuration
 rajit:bootstrap3-datepicker
 audit-argument-checks
+mdg:geolocation

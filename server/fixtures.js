@@ -59,4 +59,18 @@ if (Requests.find().count() === 0) {
     submitted: new Date(now - 12 * 3600 * 1000),
     commentsCount: 0
   });
+
+  for (var i = 0; i < 10; i++) {
+    Requests.insert({
+      title: 'Test request #' + i,
+      author: jon.username,
+      userId: jon._id,
+      dueDate: "5/5/15",
+      distance: "3 miles",
+      completed: false,
+      acceptor: null,
+      submitted: new Date(now - i * 3600 * 1000),
+      commentsCount: 0
+    });
+  }
 }
