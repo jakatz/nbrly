@@ -14,7 +14,15 @@ body {
 
 a { color:inherit; }
 
-.header-container a:hover { color: yellow; }
+a:focus { color:inherit; }
+
+.header-container a:hover { 
+  color: #eee; 
+}
+
+#signup-link {
+  color:#666;
+}
 
 li {
   list-style: none;
@@ -48,16 +56,6 @@ li {
   height: 85px;
   margin-bottom: 0;
 }
-
-/*ul.inline {
-  margin: 10px;
-  padding-left:0;
-}
-
-.inline li {
-  display:inline-block;
-  margin: 0 10px;
-}*/
 
 .add-request {
   position:absolute;
