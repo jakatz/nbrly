@@ -1,7 +1,7 @@
-Meteor.publish("requests", function(options) {
+Meteor.publish("allRequests", function(options) {
 	check(options, {
 		sort: Object,
-		limit: Number
+		limit: Number,
 	});
 	return Requests.find({}, options);
 });
@@ -20,14 +20,12 @@ Meteor.publish("notifications", function() {
 	return Notifications.find({userId: this.userId, read: false});
 });
 
-// Meteor.publish("requests", function() {
-// 	return Requests.find( {acceptor: null});
-// });
+Meteor.publish("myTasks", function(userId) {
+	check(userId, String);
+	return Requests.find({ acceptor: userId });
+});
 
-// Meteor.publish("myTasks", function() {
-// 	return Requests.find({ acceptor: this.userId });
-// });
-
-// Meteor.publish("myAcceptedRequests", function() {
-// 	return Requests.find({ author: this.username }, { acceptor: { $ne: null } });
-// });
+Meteor.publish("myAcceptedRequests", function(username) {
+	check(username, String);
+	return Requests.find({ author: username }, { acceptor: { $ne: null } });
+});
