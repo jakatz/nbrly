@@ -24,6 +24,7 @@ Template.requestItem.events({
 				throwError(error.reason);
 				console.log(error);
 			} else {
+				createAcceptedRequestNotification(currentRequestId);
 				Router.go('requestsList');
 			}
 		});

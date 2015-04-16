@@ -21,7 +21,11 @@
 <template name="notificationItem">
 	<li>
 		<a href="{{notificationRequestPath}}">
-			<strong>{{commenterName}}</strong> commented on your post
+			{{#if commenterName}}
+			<strong>{{commenterName}}</strong> commented on your request
+			{{else}}
+			<strong>{{acceptorName}}</strong> accepted your request
+			{{/if}}
 		</a>
 	</li>
 </template>
