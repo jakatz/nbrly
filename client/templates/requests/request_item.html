@@ -8,12 +8,14 @@
             <span>Due: {{dueDate}}</span>
             <br>
           <p>
-            submitted by <strong>{{author}}</strong>,
+            Submitted by <strong>{{author}}</strong>,
             <a href="{{pathFor 'requestPage'}}">{{commentsCount}} comments</a>
             {{#if ownRequest}}<a href="{{pathFor 'requestEdit'}}">Edit</a>{{/if}}
           </p>
 
-            {{description}}
+          {{#unless routeIsRequestsList}}
+            <p>Description: {{description}}</p>
+          {{/unless}}
           </div>
         </div>
         <div flex three>

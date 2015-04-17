@@ -5,6 +5,12 @@ Template.requestItem.helpers({
 
 	notAccepted: function() {
 		return (this.acceptor === null);
+	},
+
+	routeIsRequestsList: function() {
+		if (Router.current().route.getName() === 'requestsList') {
+			return true;
+		}
 	}
 });
 
