@@ -48,10 +48,13 @@ Template.requestItem.events({
 		e.preventDefault();
 
 		var currentRequestId = this._id;
+		var requestItemHTML = $('[data-rid="request_' + currentRequestId + '"]');
 
 		Requests.update({ _id: currentRequestId}, {$set: {completed: true}}, function(error) {
 			if (error) {
 				throwError(error.reason);
+			} else {
+				requestItemHTML.toggleClass("completed");
 			}
 		});
 	}
