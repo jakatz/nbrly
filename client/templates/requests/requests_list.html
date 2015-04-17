@@ -3,7 +3,7 @@
   <div class="request-title"><h3>Requests</h3></div>
   <div class="requests">
 		{{#if zeroRequests}}
-			<h3>There are currently no requests.  Submit a request by clicking the 'submit request' button at the top of the page!</h3>
+			<h3>There are currently no requests.  Submit a request by clicking the 'submit request' button at the bottom of the page!</h3>
 		{{/if}}
 
     {{#each requests}}
@@ -21,7 +21,9 @@
     {{#if currentUser}}
     <div class="add-container">
       <a href="{{pathFor 'requestSubmit'}}" class="add-request"><span class="request-button-text">Submit Request</span><paper-fab icon="add"></paper-fab></a>
-    </div>  
+    </div> 
+    {{else}}
+      <p>Log in to ask a neighbor for help!</p> 
     {{/if}}
   </div>
 
