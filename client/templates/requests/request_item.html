@@ -24,14 +24,14 @@
 
           {{#unless ownRequest}}
           <a class="vert-center accept" href="#"><paper-button raised class="btn-accept">Accept Request</paper-button></a>
-
           {{/unless}}
+
         {{/if}}
 
-        {{#if acceptedRequest}}
-            {{#unless ownRequest}}
-              <a class="vert-center mark-complete" href="#"><paper-button class="btn-accept">Mark Complete</paper-button></a>
-            {{/unless}}
+        {{#if isAccepted}}
+          {{#unless ownTask}}
+          <a class="vert-center mark-complete" href="#"><paper-button class="btn-accept">Mark Complete</paper-button></a>
+          {{/unless}}
         {{/if}}
         </div> 
       </div>   

@@ -3,8 +3,16 @@ Template.requestItem.helpers({
 		return this.userId === Meteor.userId();
 	},
 
+	ownTask: function() {
+		return this.acceptor === Meteor.user()._id;
+	},
+
 	notAccepted: function() {
 		return (this.acceptor === null);
+	},
+
+	isAccepted: function() {
+		return (this.acceptor !== null);
 	},
 
 	routeIsRequestsList: function() {
